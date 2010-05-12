@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" version="3">
+  <includeClasses>
+    <classEntry path="org.common.utils.XArrayUtil"/>
+    <classEntry path="org.common.utils.XDateUtil"/>
+    <classEntry path="org.common.utils.XFormatter"/>
+    <classEntry path="org.common.utils.XRegExp"/>
+    <classEntry path="org.common.utils.XStringUtil"/>
+    <classEntry path="org.common.utils.XTextLayout"/>
+    <classEntry path="org.common.utils.CSSFormatResolver"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
