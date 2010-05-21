@@ -38,7 +38,7 @@ package org.common.utils
 		private var _textLayoutFormatCache:Dictionary;
 		static private var styleManager: IStyleManager2;
 		
-		static public var classToNameDictionary:Object = { "SpanElement":"span", "ParagraphElement":"p", "TextFlow":"TextFlow", "DivElement":"div" }
+		static public var classToNameDictionary:Object = { "SpanElement":"span", "ParagraphElement":"p", "TextFlow":"TextFlow", "DivElement":"div", "LinkElement":"a" }
 		
 		/** Create a flex style resolver.  */
 		public function CSSFormatResolver(styleSheet:StyleSheet=null):void
@@ -134,10 +134,13 @@ package org.common.utils
 					}
 					if (cssStyle)
 					{
-						//propStyle = cssStyle.getStyle(userStyle);
-						propStyle = cssStyle[userStyle];
-						if (propStyle !== undefined)
-							return propStyle;
+						if(cssStyle.hasOwnProperty("getStyle"))
+						{
+							//propStyle = cssStyle.getStyle(userStyle);
+							propStyle = cssStyle[userStyle];
+							if (propStyle !== undefined)
+								return propStyle;
+						}
 					}
 				}
 				if (flowElem.styleName)
@@ -153,9 +156,12 @@ package org.common.utils
 					}
 					if (cssStyle)
 					{
-						propStyle = cssStyle.getStyle[userStyle];
-						if (propStyle !== undefined)
-							return propStyle;
+						if(cssStyle.hasOwnProperty("getStyle"))
+						{
+							propStyle = cssStyle.getStyle[userStyle];
+							if (propStyle !== undefined)
+								return propStyle;
+						}
 					}
 				}
 				
@@ -172,11 +178,14 @@ package org.common.utils
 				{
 					cssStyle=styleManager.getStyleDeclaration(dictionaryName == null ? elemClassName : dictionaryName) as Object;
 				}
-				if (cssStyle)
+				if(cssStyle)
 				{
-					propStyle = cssStyle.getStyle[userStyle];
-					if (propStyle !== undefined)
-						return propStyle;
+					if(cssStyle.hasOwnProperty("getStyle"))
+					{
+						propStyle = cssStyle.getStyle[userStyle];
+						if (propStyle !== undefined)
+							return propStyle;
+					}
 				}
 			}
 			return undefined;
