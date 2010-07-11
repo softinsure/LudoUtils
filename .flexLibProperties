@@ -6,8 +6,8 @@
     <classEntry path="org.common.utils.XFormatter"/>
     <classEntry path="org.common.utils.XRegExp"/>
     <classEntry path="org.common.utils.XStringUtil"/>
-    <classEntry path="org.common.utils.XTextLayout"/>
     <classEntry path="org.common.utils.CSSFormatResolver"/>
+    <classEntry path="org.common.utils.XTextFlow"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
