@@ -34,7 +34,7 @@ package org.common.utils
 	 */
 	public class CSSFormatResolver implements IFormatResolver
 	{
-		static protected var _styleSheet:StyleSheet;//added by goutam
+		static protected var _styleSheet:StyleSheet;//added by SoftInsure
 		private var _textLayoutFormatCache:Dictionary;
 		static private var styleManager: IStyleManager2;
 		

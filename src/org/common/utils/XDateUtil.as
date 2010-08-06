@@ -1,6 +1,6 @@
 /*******************************************************************************
- * Copyright  2010-2011 Goutam Malakar. All rights reserved.
- * Author: Goutam 
+ * Copyright  2010-2011 SoftInsure. All rights reserved.
+ * Author: SoftInsure 
  * File Name: XDateUtil.as 
  * Project Name: LudoUtils 
  * Created Jan 5, 2010
@@ -11,7 +11,7 @@ package org.common.utils
 
 	/**
 	 * static utility functions related to date 
-	 * @author Goutam
+	 * @author SoftInsure
 	 * 
 	 */
 	public class XDateUtil
