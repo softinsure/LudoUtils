@@ -42,15 +42,13 @@ package org.common.utils
 			parent=container;
 			format=forMat;
 		}
-		public function loadByFilePath(textPath:String,cssPath:String=""):void
+		public function load(textPath:String,cssPath:String=""):void
 		{
 			textpath=textPath;
 			csspath=cssPath;
-			var loader:URLLoader = new URLLoader();
-			loader.addEventListener(Event.COMPLETE,loadCompleteHandler);	
-			loader.addEventListener(IOErrorEvent.IO_ERROR,errorHandler);
-			loader.load(new URLRequest(textpath));
+			XURLLoader.load(textPath,loadCompleteHandler,errorHandler);
 		}
+		/*
 		public function loadByXML(textLayout:XML):void
 		{
 			if(textLayout.hasOwnProperty("text"))
@@ -63,6 +61,7 @@ package org.common.utils
 			}
 			loadFlow();
 		}
+		*/
 		public function resize(width:Number,height:Number=NaN):void
 		{
 			if(controller!=null)
@@ -78,10 +77,7 @@ package org.common.utils
 			text=e.target.data;
 			if(csspath!="")
 			{
-				var loaderStyle:URLLoader = new URLLoader();
-				loaderStyle.addEventListener(Event.COMPLETE,loadStyle);	
-				loaderStyle.addEventListener(IOErrorEvent.IO_ERROR,errorHandler);
-				loaderStyle.load(new URLRequest(csspath));
+				XURLLoader.load(csspath,loadStyle,errorHandler);
 			}
 			else
 			{
