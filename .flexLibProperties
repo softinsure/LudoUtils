@@ -9,6 +9,7 @@
     <classEntry path="org.common.utils.CSSFormatResolver"/>
     <classEntry path="org.common.utils.XTextFlow"/>
     <classEntry path="org.common.utils.XXMLUtils"/>
+    <classEntry path="org.common.utils.XURLLoader"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
